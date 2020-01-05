@@ -1,0 +1,20 @@
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+<meta name="twitter:title" content="{{ .Title }}{{ if .IsHome }} - {{ .Site.Params.Tagline }}{{ else }} - {{ .Site.Title }}{{ end }}" />
+<meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
+<meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
+
+
+
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@wearecandyblue">
+<meta property="twitter:url" content="{{ .Permalink }}">
+{{ with .Params.twitter.title }}
+  <meta property="twitter:title" content="{{ . }}">
+{{ end }}
+{{ with .Params.twitter.description }}
+  <meta property="twitter:description" content="{{ . }}">
+{{ end }}
+{{/* with .Params.twitter.image }}
+  <meta property="twitter:image" content="{{ . }}">
+{{ end */}}
