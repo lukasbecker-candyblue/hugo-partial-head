@@ -1,0 +1,13 @@
+{{ with .Params.seo.title }}
+  <title>{{ . }}</title>
+{{ end }}
+
+{{ with .Params.seo.description }}
+  <meta name="description" content="{{ . }}">
+{{ end }}
+
+{{ with .Params.seo.robots }}
+  <meta name="robots" content="{{ . }}">
+{{ else }}
+  <meta name="robots" content="noindex, nofollow">
+{{ end }}
