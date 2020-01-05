@@ -1,6 +1,22 @@
-<meta name="apple-mobile-web-app-title" content="Herr Becker">
+{{ with $.Site.Title }}
+  <meta name="apple-mobile-web-app-title" content="{{ . }}">
+{{ end }}
+
+
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="apple-touch-icon" type="" href="#" sizes="180x180">
-<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="apple-touch-startup-image" href="/launch.png">
+
+
+{{ with $.Site.Params.apple_touch_icon }}
+  <link rel="apple-touch-icon" type="" href="{{ . }}" sizes="180x180">
+{{ end }}
+
+
+{{ with $.Site.Params.apple_touch_startup_image }}
+  <link rel="apple-touch-startup-image" href="{{ . }}">
+{{ end }}
+
+
+{{ with $.Site.Params.apple_pinned_tab_icon }}
+  <link rel="mask-icon" href="{{ . }}" color="#5bbad5">
+{{ end }}
