@@ -1,7 +1,7 @@
 # hugo-partial-head
 
 ## Installation
-Install the partial as git submodule. Execute ```$ git submodule add git@github.com:lukasbecker-candyblue/hugo-partial-head.git layouts/partials/head ``` in your project root.
+Install the partial as git submodule. Execute ```$ git submodule add https://github.com/lukasbecker-candyblue/hugo-partial-head.git layouts/partials/head ``` in your project root.
 
 ## Update
 To install updates for this submodule run ``` $ git submodule update --remote ``` in your project root.
